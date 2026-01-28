@@ -1,76 +1,21 @@
-# Nuxt Minimal Starter
+# Sycamore Data Fetching Test
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Overview
+This project demonstrates a simple Nuxt 4 application that fetches and displays data from an external API.
+The endpoint used is `https://jsonplaceholder.typicode.com/users`,
 
-## Setup
+## Key Decisions
+- Used Nuxt's `useFetch` for data fetching to ensure SSR compatibility and simplicity.
+- Extracted the data logic into a composable to keep components focused on presentation.
+- Handled loading, error, and empty states explicitly to improve UX and reliability.
+- Kept state management local since the data is page-specific and short-lived.
 
-Make sure to install dependencies:
+## Tradeoffs
+- No global state management was used to avoid unnecessary complexity.
+- Styling was kept minimal to focus on code clarity and structure.
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# sycamore-frontend-test2
+## Improvements
+- I Could Add pagination for large datasets
+- Enhance the UI
+- Introduce caching or retry logic
+- Improve accessibility and testing
